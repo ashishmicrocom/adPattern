@@ -1,0 +1,38 @@
+# Railway ignore file
+# Files listed here will NOT be included in Railway deployments
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments (local only)
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Test files (optional)
+tests/
+test_*.py
+*_test.py
+
+# Development files
+.env.local
+.env.development
