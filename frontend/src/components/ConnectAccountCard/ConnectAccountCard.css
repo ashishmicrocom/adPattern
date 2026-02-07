@@ -1,0 +1,67 @@
+@import '../../theme/theme.css';
+
+.cac-new {
+    border-radius: 12px;
+    padding: 16px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.00));
+    border: 1px solid var(--color-border);
+}
+
+.cac-new__title {
+    margin: 0 0 8px;
+    color: var(--text-primary);
+    font-weight: 800;
+}
+
+.cac-new__text {
+    margin: 0 0 12px;
+    color: var(--text-secondary);
+}
+
+.cac-new__cta {
+    margin-top: 6px;
+}
+
+.cac-connect {
+    background: linear-gradient(90deg, var(--color-primary), #ff8a4b);
+    color: #fff;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.cac-flow {
+    margin-top: 8px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.03);
+    padding-top: 10px;
+}
+
+.cac-flow__steps {
+    margin: 0 0 10px 18px;
+    color: var(--text-primary);
+}
+
+.cac-flow__actions {
+    display: flex;
+    gap: 8px;
+}
+
+.cac-simulate {
+    background: #28a745;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.cac-cancel {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}

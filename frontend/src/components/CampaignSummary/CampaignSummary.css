@@ -1,0 +1,142 @@
+@import '../../theme/theme.css';
+
+.cs-root {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cs-empty {
+    color: var(--text-secondary);
+    padding: 24px;
+    text-align: center;
+}
+
+/* Section */
+.cs-section {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.cs-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.cs-section-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cs-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.cs-ai-icon {
+    font-size: 20px;
+}
+
+.cs-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cs-badge--ai {
+    background: rgba(235, 114, 58, 0.15);
+    color: var(--color-primary);
+    border: 1px solid rgba(235, 114, 58, 0.3);
+}
+
+/* Product Summary Grid */
+.cs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+}
+
+.cs-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cs-field-full {
+    grid-column: 1 / -1;
+}
+
+.cs-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.cs-value {
+    font-size: 15px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* AI Suggestions Content */
+.cs-ai-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cs-ai-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cs-ai-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.cs-ai-value {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.cs-ai-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.cs-ai-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cs-ai-value-sm {
+    font-size: 13px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    .cs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cs-ai-row {
+        grid-template-columns: 1fr;
+    }
+}

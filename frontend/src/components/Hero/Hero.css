@@ -1,0 +1,112 @@
+/* Hero layout matching provided design */
+.ap-hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 60px;
+  background: var(--color-background);
+  color: var(--text-primary);
+  position: relative;
+  overflow: hidden;
+  margin-top: -92px;
+}
+
+/* Fixed grid background wrapper */
+.ap-hero__grid-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Subtle grid background */
+.ap-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.ap-hero__inner {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.ap-hero__title {
+  font-size: 96px;
+  line-height: 0.92;
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.ap-hero__title .ap-hero__accent { color: var(--color-primary); }
+
+.ap-hero__subtitle {
+  color: var(--text-secondary);
+  font-size: 18px;
+  max-width: 780px;
+  margin: 22px auto 40px auto;
+}
+
+/* Card block matching the demo */
+.ap-hero__card {
+  background: var(--color-surface);
+  color: var(--text-primary);
+  border-radius: 18px;
+  padding: 28px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 12px 30px rgba(2,6,23,0.6);
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.ap-hero__card .label { font-size: 12px; color: var(--text-secondary); letter-spacing: 1px; }
+.ap-hero__card .title { font-size: 24px; font-weight: 700; }
+
+/* Circular CTA */
+.ap-hero__circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+/* Buttons inside hero (if present) */
+.ap-hero__cta { display:flex; gap:12px; justify-content:center; }
+.ap-btn--primary { padding: 12px 20px; border-radius: 10px; background: var(--color-primary); color: #0b0b0b; border: none; }
+.ap-btn--ghost { padding: 12px 20px; border-radius: 10px; background: transparent; border: 1px solid rgba(255,255,255,0.06); color: var(--text-primary); }
+
+@media (max-width: 900px) {
+  .ap-hero__title { font-size: 64px; }
+  .ap-hero__card { padding: 20px; border-radius: 14px; }
+}
+
+@media (max-width: 520px) {
+  .ap-hero__title { font-size: 42px; }
+  .ap-hero__subtitle { font-size: 15px; }
+  .ap-hero__card { flex-direction: column; align-items: stretch; text-align: left; }
+  .ap-hero__circle { margin-left: 0; }
+}

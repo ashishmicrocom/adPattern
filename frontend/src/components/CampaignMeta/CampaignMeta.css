@@ -1,0 +1,71 @@
+@import '../../theme/theme.css';
+
+.cm-card {
+    background: rgba(14, 17, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.cm-header {
+    margin-bottom: 16px;
+}
+
+.cm-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.cm-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.cm-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cm-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cm-value {
+    font-size: 15px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.cm-badge {
+    display: inline-flex;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.cm-badge--orange {
+    background: rgba(235, 114, 58, 0.15);
+    color: var(--color-primary);
+    border: 1px solid rgba(235, 114, 58, 0.3);
+}
+
+.cm-badge--budget {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .cm-grid {
+        grid-template-columns: 1fr;
+    }
+}

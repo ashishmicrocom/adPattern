@@ -1,0 +1,143 @@
+@import '../../theme/theme.css';
+
+.as-card {
+    background: rgba(14, 17, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.as-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.as-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.as-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: rgba(235, 114, 58, 0.15);
+    color: var(--color-primary);
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(235, 114, 58, 0.3);
+}
+
+.as-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.as-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.as-field-full {
+    grid-column: 1 / -1;
+}
+
+.as-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.as-input,
+.as-select {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: all 200ms;
+}
+
+.as-input:focus,
+.as-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.as-input-sm {
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+.as-age-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.as-separator {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.as-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.as-tag {
+    padding: 6px 12px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Enhanced select styling to match ProductForm */
+.as-select-styled {
+    cursor: pointer;
+    background-color: #1a1a1a;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23eb723a' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 40px;
+    padding: 12px 40px 12px 16px;
+    border: 1.5px solid #333333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.as-select-styled:hover {
+    border-color: #eb723a;
+}
+
+.as-select-styled:focus {
+    outline: none;
+    border-color: #eb723a;
+    background-color: #0f0f0f;
+    box-shadow: 0 0 0 3px rgba(235, 114, 58, 0.15);
+}
+
+.as-select-styled option {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 8px;
+}
+
+@media (max-width: 640px) {
+    .as-grid {
+        grid-template-columns: 1fr;
+    }
+}

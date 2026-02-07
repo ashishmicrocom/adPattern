@@ -1,0 +1,5 @@
+/* Page-level styles for the homepage */
+:root { --bg: var(--color-background, #0B0E14); }
+body { background-color: var(--bg); }
+.ap-page { min-height: 100vh; color: var(--text-primary); }
+main { padding-top: 20px; }

@@ -1,0 +1,98 @@
+.ap-nav {
+  color: var(--text-primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ap-nav--scrolled {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.ap-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ap-nav__brand {
+  font-weight: 800;
+  color: var(--text-primary);
+  font-size: 30px;
+  letter-spacing: -0.5px;
+}
+.ap-hero__accent { color: var(--color-primary); }
+.ap-nav__spacer { flex: 1; }
+
+.ap-nav__actions { display: flex; align-items: center; gap: 12px; }
+
+.ap-menu {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #eb723a;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--text-primary);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.15s ease, transform 0.12s ease, box-shadow 0.12s ease;
+  position: relative;
+  z-index: 10; /* place menu button behind the drawer */
+  pointer-events: auto;
+}
+
+.ap-sidebar__inner {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ap-sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ap-sidebar__brand { font-weight: 800; font-size: 20px; }
+
+.ap-sidebar__close {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.ap-sidebar__nav { margin-top: 32px; display:flex; flex-direction:column; gap:16px; }
+.ap-sidebar__link { color: var(--text-primary); text-decoration: none; font-size: 16px; }
+
+.ap-sidebar__footer { margin-top: auto; }
+
+/* make the menu button move visually inside the sidebar when open;
+   using a large negative translateX from its original place (animated in JS)
+*/
+
+.ap-menu svg { display: block; }
+
+/* small screens: reduce button size */
+@media (max-width: 480px) {
+  .ap-menu { width: 48px; height: 48px; }
+  .ap-nav__brand { font-size: 18px; }
+}

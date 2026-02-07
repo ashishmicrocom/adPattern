@@ -1,0 +1,238 @@
+@import '../../theme/theme.css';
+
+.sc-card {
+  background: rgba(14, 17, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Header */
+.sc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 24px 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sc-header-left {
+  flex: 1;
+}
+
+.sc-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 4px 0;
+}
+
+.sc-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.sc-edit-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 200ms;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sc-edit-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Content */
+.sc-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Product Header with Icon */
+.sc-product-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.sc-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--color-primary), #ff8a4b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.sc-product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sc-product-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.sc-product-category {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Description */
+.sc-description {
+  color: rgba(148, 163, 184, 0.9);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sc-description p {
+  margin: 0;
+}
+
+/* Metadata Grid */
+.sc-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.sc-meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sc-meta-item-full {
+  grid-column: 1 / -1;
+}
+
+.sc-meta-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.sc-meta-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.sc-meta-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Input Styles */
+.sc-input-inline {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: var(--text-primary);
+  font-size: 14px;
+  width: 100%;
+  transition: all 200ms;
+}
+
+.sc-input-inline:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sc-input-small {
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+.sc-textarea {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--text-primary);
+  font-size: 14px;
+  width: 100%;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+  transition: all 200ms;
+}
+
+.sc-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Save Button */
+.sc-save-btn {
+  background: linear-gradient(135deg, var(--color-primary), #ff8a4b);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 200ms;
+  box-shadow: 0 4px 12px rgba(235, 114, 58, 0.2);
+}
+
+.sc-save-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(235, 114, 58, 0.3);
+}
+
+.sc-save-btn:active {
+  transform: translateY(0);
+}
+
+/* Legacy CTA button (if needed elsewhere) */
+.sc-cta {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--color-primary), #ff8a4b);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(255, 138, 75, 0.12);
+  transition: transform 140ms ease, box-shadow 140ms ease, opacity 140ms ease;
+}
+
+.sc-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(255, 138, 75, 0.16);
+}
+
+.sc-cta:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,12 @@
+@import '../../theme/theme.css';
+
+.aperm-card { padding:16px; border-radius:12px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04); }
+.aperm-head { font-weight:800; color:var(--text-primary); margin-bottom:10px; }
+.aperm-empty { color:var(--text-secondary); }
+.aperm-which { color:var(--text-primary); margin-bottom:8px; }
+.aperm-list { margin:0 0 10px 18px; color:var(--text-primary); }
+.aperm-item { margin-bottom:6px; }
+.aperm-note { font-size:13px; color:var(--text-secondary); margin-top:8px; }
+.aperm-actions { display:flex; gap:8px; margin-top:12px; }
+.aperm-btn { padding:8px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:var(--text-primary); cursor:pointer; }
+.ap-btn--danger { color:#ff6b4d; border-color: rgba(255,80,50,0.08); }

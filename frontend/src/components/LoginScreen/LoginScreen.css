@@ -1,0 +1,172 @@
+.ap-login__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.6);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.ap-login__center {
+  width: 100%;
+  max-width: 1100px;
+  padding: 28px;
+}
+
+.ap-login__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 90px rgba(2, 6, 23, 0.75);
+  min-height: 520px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.ap-login__left {
+  position: relative;
+  background: linear-gradient(135deg, rgba(8,6,23,0.8) 0%, rgba(16,12,40,0.85) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ap-login__art {
+  position: absolute;
+  left: -12%;
+  top: 6%;
+  width: 140%;
+  height: 84%;
+  background: radial-gradient(circle at 20% 35%, rgba(255,140,66,0.95) 0%, rgba(255,110,60,0.75) 30%, rgba(0,0,0,0) 65%);
+  filter: blur(44px);
+  transform: rotate(-6deg);
+}
+.ap-login__art:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.02), transparent 20%);
+  mix-blend-mode: overlay;
+}
+
+.ap-login__right {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.ap-login__close {
+  margin-left: auto;
+  margin-bottom: 8px;
+  background: transparent;
+  border: 0;
+  color: var(--text-primary);
+  font-size: 20px;
+  cursor: pointer;
+}
+.ap-login__title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 6px 0 8px;
+  color: var(--text-primary);
+}
+.ap-login__subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 22px;
+  max-width: 520px;
+  line-height: 1.4;
+}
+
+.ap-login__actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+.ap-login__primary {
+  background: var(--color-primary);
+  color: #fff;
+  border: 0;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(235, 114, 58, 0.18);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.ap-login__primary:active {
+  transform: translateY(1px) scale(0.998);
+}
+.ap-login__outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.ap-login__social {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  align-items: center;
+}
+.ap-login__social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-weight: 700;
+  min-width: 120px;
+  justify-content: center;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.ap-login__social-btn svg { display: block; }
+.ap-login__social-btn span { font-size: 14px; }
+.ap-login__social-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.35); }
+
+.ap-login__social-btn--apple { background: rgba(255,255,255,0.03); }
+.ap-login__social-btn--apple svg path { fill: #000; }
+
+.ap-login__foot {
+  margin-top: 26px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .ap-login__card { grid-template-columns: 1fr; min-height: auto; }
+  .ap-login__left { height: 180px; }
+  .ap-login__right { padding: 20px; }
+  .ap-login__title { font-size: 22px; }
+}
+
+/* Forms & inputs */
+.ap-form { width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
+.ap-label { display:flex; flex-direction:column; gap:8px; color: var(--text-secondary); font-weight: 600; }
+.ap-input { background: rgba(255,255,255,0.03); color: var(--text-primary); border: 1px solid rgba(255,255,255,0.06); padding: 12px 14px; border-radius: 10px; outline: none; }
+.ap-input:focus { box-shadow: 0 8px 24px rgba(0,0,0,0.45); border-color: rgba(235,114,58,0.6); }
+.ap-otp-input { letter-spacing: 8px; font-size: 20px; text-align: center; background: rgba(255,255,255,0.02); padding: 12px 8px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); }
+.ap-form-row { display:flex; gap:12px; width:100%; justify-content:space-between; align-items:center; margin-top:6px; }
+.ap-back-btn { background: transparent; color: var(--text-secondary); border: 0; cursor: pointer; font-weight: 700; }
+.ap-message { margin-top:8px; color: #ffb3a7; font-weight: 700; }
+.ap-debug { margin-top:8px; font-size: 12px; color: rgba(255,255,255,0.5); }
+.ap-success { display:flex; flex-direction:column; gap:8px; }
+
+/* Ensure card is solid (not transparent) */
+.ap-login__card { background: linear-gradient(180deg, rgba(8,10,20,0.98), rgba(12,14,30,0.98)); }
+
+/* Make links a bit more visible */
+.ap-login__foot a { color: rgba(235,114,58,0.95); text-decoration: underline; }
+

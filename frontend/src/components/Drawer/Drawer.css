@@ -1,0 +1,124 @@
+.ap-drawer__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: #000;
+}
+
+.ap-drawer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 50;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ap-drawer__content {
+  width: 100%;
+  height: 100vh; /* cover full viewport so no top space remains */
+  margin: 0 auto;
+  background: var(--color-background);
+  border-radius: 0; /* full-bleed, no rounded corners */
+  overflow: hidden;
+  box-shadow: 0 -30px 60px rgba(2,6,23,0.6);
+  display: flex;
+  z-index: 90;
+}
+
+.ap-drawer__media {
+  flex: 1 1 45%;
+  background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center center;
+}
+
+.ap-drawer__panel {
+  flex: 1 1 55%;
+  padding: 48px 56px;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.ap-drawer__help { font-size: 14px; color: var(--color-primary); }
+
+.ap-drawer__topbar {
+  position: fixed;
+  top: 18px;
+  /* align to the navbar's inner container right edge: calc((100% - maxWidth)/2 + padding) */
+  right: calc((100% - 1200px) / 2 + 24px);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  z-index: 60;
+}
+
+.ap-drawer__login {
+  border: 1px solid var(--color-primary);
+  background: transparent;
+  padding: 18px 26px;
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.ap-drawer__close {
+  background: var(--color-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* positioned via .ap-drawer__topbar */
+}
+
+.ap-drawer__nav { margin-top: 40px; display:flex; flex-direction:column; gap: 18px; }
+.ap-drawer__link {
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 6px; /* give space for the underline */
+  display: inline-block; /* make width fit text so underline matches text width */
+}
+
+/* animated underline using pseudo-element */
+.ap-drawer__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  background: var(--color-primary);
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 260ms cubic-bezier(.2,.9,.2,1);
+  border-radius: 4px;
+}
+
+.ap-drawer__link:hover::after,
+.ap-drawer__link:focus::after {
+  transform: scaleX(1);
+}
+
+.ap-drawer__footer { margin-top: auto; display:flex; justify-content:space-between; gap: 24px; color: var(--text-secondary); }
+.ap-drawer__legal { display:flex; flex-direction:column; gap:8px; }
+.ap-drawer__legal-right { display:flex; flex-direction:column; gap:8px; }
+
+@media (max-width: 900px) {
+  .ap-drawer__content { flex-direction: column; height: 95vh; }
+  .ap-drawer__media { height: 240px; flex: 0 0 auto; }
+  .ap-drawer__panel { padding: 28px; }
+  .ap-drawer__link { font-size: 28px; }
+  .ap-drawer__topbar { right: 16px; }
+}

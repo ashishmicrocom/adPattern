@@ -1,0 +1,155 @@
+@import '../../theme/theme.css';
+
+.features-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(30, 30, 30);
+  padding: 80px 40px;
+  overflow: hidden;
+  background-color:  rgb(30, 30, 30);
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.features-hero {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.features-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 32px 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.features-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin-top: 80px;
+}
+
+.feature-card {
+  padding: 48px 32px;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 320px;
+}
+
+.feature-card:hover {
+  border-color: var(--accent-color);
+  background: rgba(235, 114, 58, 0.03);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(235, 114, 58, 0.15);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 24px;
+  display: inline-block;
+  color: var(--accent-color);
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.feature-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 980px) {
+  .features-section {
+    padding: 80px 24px;
+  }
+
+  .features-hero {
+    margin-bottom: 60px;
+  }
+
+  .features-title {
+    font-size: 2.5rem;
+  }
+
+  .features-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 60px;
+  }
+
+  .feature-card {
+    padding: 40px 28px;
+    min-height: auto;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .feature-title {
+    font-size: 1.375rem;
+  }
+
+  .feature-description {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .features-section {
+    padding: 60px 20px;
+  }
+
+  .features-title {
+    font-size: 2rem;
+  }
+
+  .features-subtitle {
+    font-size: 1rem;
+  }
+
+  .feature-card {
+    padding: 32px 24px;
+  }
+}

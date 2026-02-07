@@ -1,0 +1,138 @@
+@import '../../theme/theme.css';
+
+.gc-root {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.gc-panel-header {
+    text-align: center;
+}
+
+.gc-panel-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+
+.gc-panel-subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.gc-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px;
+    gap: 20px;
+}
+
+.gc-content-loading {
+    padding: 80px 40px;
+}
+
+/* Icon */
+.gc-icon-wrap {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(50, 40, 30, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.gc-icon-wrap--success {
+    background: rgba(34, 197, 94, 0.15);
+}
+
+.gc-icon {
+    font-size: 52px;
+}
+
+/* Ready State */
+.gc-ready-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.gc-ready-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 480px;
+}
+
+/* Loading State */
+.gc-spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.gc-loading-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.gc-loading-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 420px;
+}
+
+/* Success State */
+.gc-success-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #22c55e;
+    margin: 0;
+}
+
+.gc-success-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Button */
+.gc-btn {
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 200ms;
+    border: none;
+    margin-top: 12px;
+}
+
+.gc-btn--primary {
+    background: linear-gradient(135deg, var(--color-primary), #ff8a4b);
+    color: white;
+    box-shadow: 0 6px 20px rgba(235, 114, 58, 0.4);
+}
+
+.gc-btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(235, 114, 58, 0.5);
+}

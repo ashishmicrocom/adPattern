@@ -1,0 +1,26 @@
+.magnetic-cursor {
+  transition: background-color 0.18s ease, width 0.18s ease, height 0.18s ease, border-radius 0.18s ease, opacity 0.2s ease;
+  will-change: transform, width, height, border-radius, opacity;
+  pointer-events: none;
+  display: block;
+}
+
+/* Demo helper classes (non-Tailwind)
+   Use data-magnetic on elements you want the cursor to interact with
+*/
+.magnetic-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: var(--color-surface, #141821);
+  color: var(--text-primary, #fff);
+  border: 1px solid var(--color-border, #1F2933);
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}

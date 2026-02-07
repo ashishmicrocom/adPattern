@@ -1,0 +1,16 @@
+.magnetic-demo-root {
+  min-height: 100vh;
+  background: var(--color-background, #0B0E14);
+  color: var(--text-primary, #FFFFFF);
+  font-family: var(--font-family, Arial, sans-serif);
+  padding: 48px 20px;
+  box-sizing: border-box;
+}
+
+.magnetic-demo-header { text-align: center; margin-bottom: 28px; }
+.magnetic-demo-header h1 { font-size: 32px; margin: 0; }
+
+.magnetic-demo-main { max-width: 1100px; margin: 0 auto; }
+.demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
+.magnetic-box { padding: 18px; border-radius: 12px; text-align:center; }
+.magnetic-demo-footer { text-align:center; margin-top: 40px; opacity: 0.7; }

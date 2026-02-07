@@ -1,0 +1,135 @@
+@import '../../theme/theme.css';
+
+.cr-root {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cr-empty {
+    color: var(--text-secondary);
+    padding: 40px;
+    text-align: center;
+}
+
+/* Header */
+.cr-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cr-header-left {
+    flex: 1;
+}
+
+.cr-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 6px 0;
+}
+
+.cr-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.cr-header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.cr-btn {
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 200ms;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cr-btn--regen {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.cr-btn--regen:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.cr-btn--view {
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    color: #667eea;
+}
+
+.cr-btn--view:hover {
+    background: rgba(102, 126, 234, 0.2);
+    border-color: rgba(102, 126, 234, 0.4);
+    transform: translateY(-1px);
+}
+
+.cr-btn--publish {
+    background: linear-gradient(135deg, var(--color-primary), #ff8a4b);
+    color: white;
+    box-shadow: 0 4px 12px rgba(235, 114, 58, 0.3);
+}
+
+.cr-btn--publish:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(235, 114, 58, 0.4);
+}
+
+/* Body */
+.cr-body {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.cr-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cr-right {
+    position: sticky;
+    top: 24px;
+}
+
+@media (max-width: 1024px) {
+    .cr-body {
+        grid-template-columns: 1fr;
+    }
+    
+    .cr-right {
+        position: static;
+    }
+    
+    .cr-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .cr-header-actions {
+        width: 100%;
+    }
+    
+    .cr-btn {
+        flex: 1;
+    }
+}
